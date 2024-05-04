@@ -1,0 +1,33 @@
+{
+    "MediLingual": {
+        "Tagline": "1st  Place Healthcare Hack @YHack 2024",
+        "About": "MediLingual is a universal assistant which provides medical domain-specific multilingual translation services in 99 different languages.\n\nIt uses a Flask REST API that handles any combination of 4581 to ease translation between patient and doctor in real time and Whisper and OpenAI API with few-shot and chain-of-thought prompting to remove any untranslatable medical jargon.",
+        "Tags": ["AI", "Flask", "LLMs"]
+    },
+    "The Social Space": {
+        "Tagline": "Full-Stack Data Visualization",
+        "About": "In this project, we graphically represented TikTok's social media algorithm with an interactive and intuitive Three.js and WebGL 3d graph. To do this, we web scraped 300,000+ TikTok videos for hashtags into a tabular file andbuilt a custom weighted graph data structure to store the data. Then, we used Louvain method with NetworkX to color similar hashtag clusters.\n\nThe Social Space is currently hosted using AWS at https://the-social-space.com/.",
+        "Tags": ["AWS", "Three.js", "WebGL"]
+    },
+    "Aerovision": {
+        "Tagline":"1st  Place Healthcare Hack @YHack 2024",
+        "About": " You get Lorem Ipsum text for this cause I'm not very familiar with this project </3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+        "Tags": ["OpenCV", "Robotics"]
+    },
+    "ASLModel": {
+        "Tagline": "1st Place Overall @ SteelHacks 2023",
+        "About": "ASLModel is a custom CV model that automatically translates ASL to English. We trained this model from 25,000 hand images displaying ASL signs.\n\nMy role in this project was to create an accessible interface via a web-app with React components that can take input from the webcam and continuously integrate user training data for model improvement. ",
+        "Tags": ["TensorFlow", "OpenCV", "React"]
+    },
+    "Smash Bros Tournament Results Poster": {
+        "Tagline": "Smash Bros Tournament Scraper",
+        "About": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+        "Tags": ["APIs"]
+    },
+    "Lyrics Scraper": {
+        "Tagline": "Lyrics Scraper",
+        "About": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+        "Tags": ["Beautiful Soup", "Web Scraping"]
+    }
+
+}
