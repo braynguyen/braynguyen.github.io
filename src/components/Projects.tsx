@@ -1,6 +1,5 @@
 import ProjectCard from "./ProjectCard"
 import { useState, useEffect } from "react"
-// import { motion } from "framer-motion"
 import './styles/Projects.css'
 
 type Project = {
@@ -12,6 +11,7 @@ type Project = {
 
 function Projects() {
     const [projects, setProjects] = useState<Project[]>([]);
+    const [cardsPerRow, setCardsPerRow] = useState(3);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,17 +27,50 @@ function Projects() {
         fetchData();
     }, []);
 
+    useEffect(() => {
+        function handleResize() {
+            const breakpoints: { [key: number]: number } = {
+                768: 1,
+                1024: 2,
+                2048: 3,
+            };
+
+            const viewportWidth = window.innerWidth;
+            let cardsPerRow = 4; // default value
+            Object.keys(breakpoints)
+                .sort((a, b) => parseInt(b, 10) - parseInt(a, 10)) // Sort in descending order (it breaks otherwise)
+                .forEach((breakpoint) => {
+                    if (viewportWidth < parseInt(breakpoint, 10)) {
+                        cardsPerRow = breakpoints[parseInt(breakpoint, 10)];
+                    }
+                });
+            // Update the state
+            setCardsPerRow(cardsPerRow);
+        }
+
+        // Initial call to set the cards per row based on the viewport width
+        handleResize();
+
+        // Event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup function
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <>
-            <div id="portfolio-section">
+            <div id="projects-section">
                 <div id="projects-container">
                     <h1 className="section-name">Projects</h1>
                     {projects.map((_, index) => (
-                        index % 3 === 0 && (
-                            <div key={index / 3} className="row">
-                                {projects.slice(index, index + 3).map((project, index) => (
+                        index % cardsPerRow === 0 && (
+                            <div key={index / cardsPerRow} className="row">
+                                {projects.slice(index, index + cardsPerRow).map((project, projectIndex) => (
                                     <ProjectCard
-                                        key={index}
+                                        key={projectIndex}
                                         name={project.Name}
                                         tagline={project.Tagline}
                                         description={project.About}
@@ -50,7 +83,8 @@ function Projects() {
                 </div>
             </div>
         </>
-    )
+    );
 }
+
 
 export default Projects;

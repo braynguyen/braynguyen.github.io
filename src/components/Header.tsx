@@ -6,13 +6,14 @@ function Header() {
         <>
             <div id="header-container">
                 <div className="left">
-                    <div className="logo-or-pic"></div>
-                    <p className='header-title'>Personal Portfolio</p>
+                    <img className="logo-or-pic" src='/headshot.jpg'/>
+                    <p className='header-title'>Brayden Nguyen</p>
                 </div>
                 <div className="right">
                     <ScrollButton name="About" sectionId="hero-section"/>
-                    <ScrollButton name="Portfolio" sectionId="portfolio-section"/>
-                    <ScrollButton id="lastScroll" name="Contact" sectionId=""/>
+                    <ScrollButton name="Experience" sectionId="work-section" />
+                    <ScrollButton name="Projects" sectionId="projects-section"/>
+                    <ScrollButton id="lastScroll" name="Contact" sectionId="contact-section"/>
                 </div>
             </div>
         </>

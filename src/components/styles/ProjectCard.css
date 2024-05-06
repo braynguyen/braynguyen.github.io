@@ -1,16 +1,64 @@
 .container {
     display: flex;
-    max-width: 400px;
+    max-width: 430px;
     width:25vw;
     flex-direction: column;
     color: #fff;
     font-weight: 800;
-    /* padding: 20px; */
     padding: 10px;
-    border: 4px solid #fff; /* Add white border */
-    border-radius: 15px; /* Add rounded corners */
-    box-sizing: border-box; /* Ensure border is included in max-width calculation */
+    border: 4px solid #fff;
+    /* border-radius: 15px; */
+    box-sizing: border-box;
 }
+
+.offset {
+    position: relative;
+    border-width: 4px; 
+    border-style: solid;
+    /* border-radius: 15px; */
+    overflow: hidden; 
+}
+
+.offset:hover {
+    text-shadow: 5px 10px 4px #000;
+    /* messes up the radius so i removed it */
+    border-image: conic-gradient( 
+      from var(--gradient-angle),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3)
+    ) 1;
+    border-radius: 15px;
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+
+:root {
+    --clr-1: #052b2f;
+    --clr-2: #073438;
+    --clr-3: #0e4b50;
+    --clr-4: #2d8f85;
+    --clr-5: #637c54;
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+  
+
 .project-name {
     letter-spacing: -4px;
     font: 720 50px Open Sans, sans-serif;
@@ -48,21 +96,6 @@
     background-color: #7dd7cb;
     justify-content: center;
     padding: 11px 10px;
+    text-shadow: none;
 }
 
-.fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-@keyframes fadeInUp {
-from {
-    opacity: 0;
-    transform: translateY(20px);
-}
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
-}

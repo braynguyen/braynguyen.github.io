@@ -1,9 +1,9 @@
 .portfolio-container {
     position: relative;
     display: flex;
+    padding-bottom: 5vh;
     flex-direction: column; /* Stack items vertically */
     background-color: #021F1B;
-    overflow: hidden;
     height: 100%;
     width: 100%;
 }

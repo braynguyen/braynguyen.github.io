@@ -20,7 +20,7 @@ function ProjectCard({ name, tagline, description, tags }: Project) {
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0.5 },
       }}
-      className="container"
+      className="container offset"
     >
       <div className="project-name">{name}</div>
       <div className="tagline">{tagline}</div>
@@ -34,7 +34,8 @@ function ProjectCard({ name, tagline, description, tags }: Project) {
             {tag}
           </div>
         ))}
-      </div>
+        </div>
+
     </motion.div>
   );
 }

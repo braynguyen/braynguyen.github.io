@@ -1,62 +1,66 @@
 #header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    float: left;
     width: 100%;
-    height: 9vh;
+    height: 8vh;
     position: sticky;
     top: 0;
     background-color: #000;
     z-index: 1000;
     margin: 0;
     padding: 0;
+    /* overflow: hidden; */
 }
 
 .left {
+    float:left;
+    height: 100%;
     margin-left: 5%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; 
 }
 
+.right {
+    float: right;
+    height: 100%;
+    margin-right: 5%; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
 .header-title {
-    font-size: 1.3em;
+    font-size: 2em;
     font-family: Ubuntu Mono;
     font-weight: 400;
     word-wrap: break-word;
-    width: 50%; /* Adjust as needed */
+    width: 100%;
 }
 .logo-or-pic {
-    height: 3em;
-    width: 3em;
-    background-color: #FFF;
+    height: 4em;
+    width: 4em;
     border-radius: 50%;
     display: inline-block;
 }
 
 .logo-or-pic, .header-title {
     display: inline-block;
-    box-sizing: border-box; /* Ensure padding and border don't increase the width */
-    padding: 10px; /* Optional: Add padding as needed */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for visibility */
+    box-sizing: border-box;
+    padding: 10px;
     color: white;
   }
 
 
-.right {
-    display: flex;
-    align-items: center;
-    margin-right: 8%;
-    height: 100%;
-}
 
 .scrollButton {
+    width: fit-content;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    cursor: pointer; /* Add this line */
+    cursor: pointer;
     border: none;
     padding-left:5%;
     padding-right: 5%;
