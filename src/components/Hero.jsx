@@ -16,7 +16,7 @@ function Hero() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('../src/data/about.json');
+                const response = await fetch('/data/about.json');
                 const jsonData = await response.json();
                 setData(jsonData);
             } catch (error) {

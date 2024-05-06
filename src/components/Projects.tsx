@@ -15,7 +15,7 @@ function Projects() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('../src/data/projects.json');
+                const response = await fetch('/data/projects.json');
                 const jsonData = await response.json();
                 setProjects(jsonData.projects);
             } catch (error) {
