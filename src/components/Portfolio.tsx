@@ -7,8 +7,9 @@ function Portfolio() {
         <>
             <div className='portfolio-container'>
                 <h1 className='portfolio-text'>PORTFOLIO</h1>
-                <Projects />
+                <div style={{ height: "18vw", width: "100%" }} />
                 <Work />
+                <Projects />
             </div>
         </>
     )

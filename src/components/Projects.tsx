@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard"
 import { useState, useEffect } from "react"
+// import { motion } from "framer-motion"
 import './styles/Projects.css'
 
 type Project = {
@@ -29,7 +30,6 @@ function Projects() {
     return (
         <>
             <div id="portfolio-section">
-                <div style={{ height: "18vw", width: "100%" }} />
                 <div id="projects-container">
                     <h1 className="section-name">Projects</h1>
                     {projects.map((_, index) => (

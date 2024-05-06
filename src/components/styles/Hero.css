@@ -74,9 +74,9 @@
   text-align: center;
   text-shadow: 5px 10px 4px #000;
   font-family: "Open Sans";
-  font-size: 9em; /* Responsive font size based on viewport */
+  font-size: 11vw;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 100;
   line-height: normal;
   letter-spacing: -8px;
   position: absolute;
@@ -85,6 +85,32 @@
   transform: translateX(-50%); /* Center the text horizontally */
   z-index: -1;
   white-space: nowrap; /* Prevent text from wrapping */
+}
+.hoverText {
+  transition: 0.3s font-weight,
+    0.35s color;
+}
+
+.hoverText:hover {
+  font-weight: 900;
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+  font-weight: 500;
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  font-weight: 300;
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+  font-weight: 500;
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  font-weight: 300;
 }
 
 .night {

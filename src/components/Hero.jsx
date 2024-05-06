@@ -31,7 +31,13 @@ function Hero() {
     return (
         <>
             <div id='hero-section' className='body'>
-                <h1 className='name'>BRAYDEN NGUYEN</h1>
+                <h1 className='name'>
+                {"Brayden Nguyen".split("").map((child, idx) => (
+                    <span className="hoverText" key={idx}>
+                        {child}
+                    </span>
+                ))}
+                </h1>
                 <div className="about">
                     <p id="about">{data.about}</p>
                 </div>

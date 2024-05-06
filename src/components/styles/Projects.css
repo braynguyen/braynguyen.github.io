@@ -8,13 +8,13 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Centers the rows horizontally */
-    gap: 5vw;
-    margin-bottom: 5vw;
+    gap: 3vw;
+    margin-bottom: 3vw;
 }
 
 .row {
     display: flex; /* Use flexbox for the row */
     justify-content: center; /* Center items horizontally within the row */
-    gap: 5vw;
+    gap: 3vw;
 }
   
