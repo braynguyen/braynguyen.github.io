@@ -1,0 +1,29 @@
+.portfolio-container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    background-color: #021F1B;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-text {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 19.5vw; 
+    letter-spacing: -25px;
+    line-height: 0.7;
+    font-style: normal;
+    font-weight: 800;
+}
+
+
+.section-name {
+    color: white;
+    font-size: 3.5em;
+    text-align: center;
+    font-family: 'Ubuntu Mono';
+}

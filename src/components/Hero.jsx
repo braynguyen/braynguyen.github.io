@@ -1,7 +1,6 @@
-'use client'
 import React from 'react';
 import { useEffect, useState } from 'react'
-import './styles/Flower.css'
+import './styles/Hero.css'
 
 function Hero() {
     const [loaded, setLoaded] = useState(false);
@@ -17,9 +16,8 @@ function Hero() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('/src/data/about.json');
+                const response = await fetch('../src/data/about.json');
                 const jsonData = await response.json();
-                console.log(jsonData)
                 setData(jsonData);
             } catch (error) {
                 console.error('Error fetching data:', error);

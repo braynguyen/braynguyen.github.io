@@ -1,31 +1,4 @@
-.test {
-    height: 150vh;
-    
-}
 
 .hero {
     padding-top: 100px; /* Adjust padding to accommodate the sticky header */
 }
-
-.portfolio-container {
-    position: relative;
-    display: flex;
-    justify-content: center; /* Align content horizontally */
-    background-color: #021F1B;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-}
-
-.portfolio-text {
-    position: absolute;
-    color: #fff;
-    text-align: center;
-    font-family: "Open Sans";
-    font-size: calc(19.5vw); 
-    letter-spacing: -25px;
-    line-height: 0.7;
-    font-style: normal;
-    font-weight: 800;
-}
-

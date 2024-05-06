@@ -1,4 +1,3 @@
-import React from "react";
 import ScrollButton from "./ScrollButton";
 import './styles/Header.css'
 
@@ -12,7 +11,7 @@ function Header() {
                 </div>
                 <div className="right">
                     <ScrollButton name="About" sectionId="hero-section"/>
-                    <ScrollButton name="Work" sectionId="portfolio-section"/>
+                    <ScrollButton name="Portfolio" sectionId="portfolio-section"/>
                     <ScrollButton id="lastScroll" name="Contact" sectionId=""/>
                 </div>
             </div>

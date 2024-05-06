@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    max-width: 22vw;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 800;
+    /* padding: 20px; */
+    padding: 10px 4px 4px 4px;
+    border: 4px solid #fff; /* Add white border */
+    border-radius: 15px; /* Add rounded corners */
+    box-sizing: border-box; /* Ensure border is included in max-width calculation */
+}
+.project-name {
+    letter-spacing: -4px;
+    font: 720 50px Open Sans, sans-serif;
+    line-height: 1;
+}
+.tagline {
+    letter-spacing: -2.45px;
+    margin-top: 0px;
+    font: 430 35px Ubuntu Mono, -apple-system, Roboto, Helvetica,
+        sans-serif;
+    line-height: 1;
+}
+.description {
+    letter-spacing: -1.4px;
+    margin-top: 14px;
+    font: 700 20px Open Sans, sans-serif;
+    line-height: 1.2;
+
+}
+.tags-container {
+    display: flex;
+    width: 100%;
+    margin-top: 7px;
+    gap: 17px;
+    font-size: 20px;
+    color: #021f1b;
+    text-align: center;
+    letter-spacing: -1.75px;
+    justify-content: center;
+}
+
+.tag {
+    font-family: Open Sans, sans-serif;
+    border-radius: 20px;
+    background-color: #7dd7cb;
+    justify-content: center;
+    padding: 11px 34px;
+}

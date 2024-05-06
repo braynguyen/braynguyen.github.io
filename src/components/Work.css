@@ -1,0 +1,13 @@
+#work-section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the rows horizontally */
+    gap: 5vw;
+    margin-bottom: 5vw;
+}
