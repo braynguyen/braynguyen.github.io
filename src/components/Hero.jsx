@@ -31,7 +31,7 @@ function Hero() {
     return (
         <>
             <div id='hero-section' className='body'>
-                <h1 className='name'>
+                <h1 className='name tracking-tighter'>
                 {"Brayden Nguyen".split("").map((child, idx) => (
                     <span className="hoverText" key={idx}>
                         {child}

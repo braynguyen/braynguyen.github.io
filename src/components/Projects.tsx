@@ -10,8 +10,8 @@ type Project = {
 }
 
 function Projects() {
-    const [projects, setProjects] = useState<Project[]>([]);
     const [cardsPerRow, setCardsPerRow] = useState(3);
+    const [projects, setProjects] = useState<Project[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {

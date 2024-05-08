@@ -22,7 +22,7 @@ function ProjectCard({ name, tagline, description, tags }: Project) {
       }}
       className="container offset"
     >
-      <div className="project-name">{name}</div>
+      <div className="project-name" dangerouslySetInnerHTML={{ __html: name }}></div>
       <div className="tagline">{tagline}</div>
       <div
         className="description"
