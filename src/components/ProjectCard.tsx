@@ -2,23 +2,21 @@ import "./styles/ProjectCard.css";
 import { motion } from "framer-motion";
 
 type Project = {
-  key?: number;
   name: string;
   tagline: string;
   description: string;
   tags: string[];
 };
 
-function ProjectCard({ key, name, tagline, description, tags }: Project) {
+function ProjectCard({ name, tagline, description, tags }: Project) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{
-        duration: 0.4,
-        delay: (key || 0) * 0.08,
-        ease: "easeOut"
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
       }}
       className="container offset"
     >

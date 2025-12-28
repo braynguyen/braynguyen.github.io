@@ -13,10 +13,28 @@
 }
 
 .row {
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     gap: 3vw;
     padding-left: 1vw;
     padding-right: 1vw;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .row {
+        gap: 2vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        gap: 3vw;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+    }
 }
   
