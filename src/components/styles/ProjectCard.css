@@ -3,8 +3,8 @@
 
 .container {
     display: flex;
-    max-width: 430px;
-    width: 25vw;
+    width: 420px;
+    flex: 0 0 420px;
     flex-direction: column;
     color: #fff;
     font-weight: 800;
@@ -12,7 +12,6 @@
     box-sizing: border-box;
     background: linear-gradient(135deg, rgba(14, 75, 80, 0.3), rgba(7, 52, 56, 0.5));
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
 }
 
 .offset {
@@ -26,19 +25,39 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.offset:hover {
-    text-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4);
-    border-image: conic-gradient(
+.offset::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 20px;
+    padding: 3px;
+    background: conic-gradient(
       from var(--gradient-angle),
       var(--clr-3),
       var(--clr-4),
       var(--clr-5),
       var(--clr-4),
       var(--clr-3)
-    ) 1;
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.offset:hover::before {
+    opacity: 1;
+    animation: rotation 2s linear infinite;
+}
+
+.offset:hover {
+    text-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4);
+    border-color: transparent;
     box-shadow: 0 12px 40px rgba(45, 143, 133, 0.4), 0 0 20px rgba(125, 215, 203, 0.3);
     transform: translateY(-5px);
-    animation: rotation 2s linear infinite;
 }
 
 @keyframes rotation {

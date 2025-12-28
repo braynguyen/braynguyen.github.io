@@ -11,16 +11,55 @@
     width: 100%;
 }
 
+.portfolio-text-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+}
+
 .portfolio-text {
-    position: absolute;
     color: #fff;
     text-align: center;
     font-family: "Open Sans", sans-serif;
-    font-size: 19.5vw; 
+    font-size: 15vw;
     text-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
-    line-height: 0.8;
+    line-height: 0.94;
     font-style: normal;
     font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.02em;
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .portfolio-text {
+        font-size: 14vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-text {
+        font-size: 13vw;
+    }
+
+    .portfolio-text-container {
+        padding: 2vh 1vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-text {
+        font-size: 12vw;
+        line-height: 1;
+    }
 }
 
 

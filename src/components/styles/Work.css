@@ -6,7 +6,7 @@
     height: 100%;
     width: 100%;
     position: relative;
-    /* overflow-x: hidden; */
+    overflow-x: clip;
 }
 
 #work-container {
@@ -15,4 +15,275 @@
     align-items: center;
     gap: 5vw;
     margin-bottom: 5vw;
+}
+
+/* Main section wrapper */
+.work-section-wrapper {
+    position: relative;
+    height: 300vh;
+    width: 100%;
+}
+
+.work-section-wrapper.mobile {
+    height: 400vh;
+}
+
+/* Sticky container */
+.work-sticky-container {
+    position: sticky;
+    top: 8vh;
+    display: flex;
+    height: 92vh;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    touch-action: pan-y;
+}
+
+/* Prevent body scroll on touch for horizontal gestures in this section */
+.work-cards-container {
+    touch-action: pan-y;
+}
+
+/* Header */
+.work-header {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 10;
+}
+
+.work-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    font-family: "Open Sans", sans-serif;
+}
+
+.work-subtitle {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* Cards container */
+.work-cards-container {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Individual card */
+.work-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #056150, #073d32);
+    width: 55vh;
+    height: 55vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(125, 215, 203, 0.2);
+}
+
+.work-card:hover {
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 50px rgba(5, 97, 80, 0.5), 0 0 30px rgba(125, 215, 203, 0.3);
+    transform: scale(1.02);
+    border-color: rgba(125, 215, 203, 0.5);
+}
+
+/* Logo container */
+.work-card-logo-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 400ms ease-in-out;
+}
+
+.work-card:hover .work-card-logo-container {
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+.work-card-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* Overlay */
+.work-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95));
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    padding: 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.work-card:hover .work-card-overlay {
+    opacity: 1;
+    transition-delay: 300ms;
+}
+
+/* Scrollbar styling for overlay */
+.work-card-overlay::-webkit-scrollbar {
+    width: 8px;
+}
+
+.work-card-overlay::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.work-card-overlay::-webkit-scrollbar-thumb {
+    background: rgba(5, 97, 80, 0.5);
+    border-radius: 10px;
+}
+
+.work-card-overlay::-webkit-scrollbar-thumb:hover {
+    background: rgba(5, 97, 80, 0.7);
+}
+
+/* Card content */
+.work-card-content {
+    text-align: center;
+    color: #021f1b;
+    max-width: 100%;
+    width: 100%;
+    margin: auto 0;
+}
+
+.work-card-title {
+    font-weight: 800;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    text-decoration: underline;
+    text-decoration-color: #056150;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    margin-bottom: 0.75rem;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: -1px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.work-card-company {
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-style: italic;
+    color: #2d8f85;
+    margin-bottom: 1.25rem;
+    font-family: "Open Sans", sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.work-card-description {
+    font-size: clamp(0.9rem, 2vw, 1.125rem);
+    font-weight: 600;
+    line-height: 1.6;
+    color: #052b2f;
+    font-family: "Open Sans", sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .work-sticky-container {
+        top: 6vh;
+        height: 94vh;
+    }
+
+    .work-header {
+        top: 1rem;
+    }
+
+    .work-title {
+        font-size: 2rem;
+    }
+
+    .work-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .work-cards-container {
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+
+    .work-card {
+        width: 80vw;
+        height: 80vw;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .work-card-title {
+        font-size: 1.5rem;
+    }
+
+    .work-card-company {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .work-card-description {
+        font-size: 0.875rem;
+        line-height: 1.4;
+    }
+
+    .work-card-overlay {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-title {
+        font-size: 1.75rem;
+    }
+
+    .work-card {
+        width: 85vw;
+        height: 85vw;
+    }
+
+    .work-card-title {
+        font-size: 1.25rem;
+    }
+
+    .work-card-company {
+        font-size: 1.1rem;
+    }
+
+    .work-card-description {
+        font-size: 0.8rem;
+    }
+
+    .work-card-overlay {
+        padding: 1rem;
+    }
 }

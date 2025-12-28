@@ -9,16 +9,16 @@ type Project = {
   tags: string[];
 };
 
-function ProjectCard({ name, tagline, description, tags }: Project) {
+function ProjectCard({ key, name, tagline, description, tags }: Project) {
   return (
     <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0.5 },
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        duration: 0.4,
+        delay: (key || 0) * 0.08,
+        ease: "easeOut"
       }}
       className="container offset"
     >

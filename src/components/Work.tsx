@@ -22,8 +22,19 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["40%", "-40%"]);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], isMobile ? ["5%", "-90%"] : ["1%", "-80%"]);
 
   const [Work, setWork] = useState<CardType[]>([]);
 
@@ -40,15 +51,15 @@ const HorizontalScrollCarousel = () => {
 
         fetchData();
     }, []);
-  
+
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]">
-      <div className="sticky top-[8vh] flex h-[92vh] items-center overflow-hidden">
-        <div className="absolute top-10 inset-x-0 flex items-center justify-center text-white section-name">
-          Experience <p className="text-xs">(keep scrolling like normal)</p>
+    <section ref={targetRef} className={`work-section-wrapper ${isMobile ? 'mobile' : ''}`}>
+      <div className="work-sticky-container">
+        <div className="work-header">
+          <span className="work-title">Experience</span>
         </div>
-        <motion.div style={{ x }} className="flex gap-4">
+        <motion.div style={{ x }} className="work-cards-container">
           {Work.map((card) => {
             return <Card card={card} key={card.name} />;
           })}
@@ -72,26 +83,26 @@ const Card = ({ card }: { card: CardType }) => {
   }, [card.url]);
 
   const aspectRatio = width && height ? width / height : 1;
-  const maxCardHeight = 55 * aspectRatio; // Maximum height based on aspect ratio
+  const maxCardHeight = 55 * aspectRatio;
 
   return (
     <div
       key={card.id}
-      className="group relative overflow-hidden bg-[#056150] w-[55vh] h-[55vh] rounded-full flex items-center justify-center transition-all duration-[300ms] ease-in-out hover:rounded-lg"
+      className="work-card"
     >
-      <div className="w-[70%]" style={{ maxHeight: `${maxCardHeight}vh` }}>
+      <div className="work-card-logo-container" style={{ maxHeight: `${maxCardHeight}vh` }}>
         <img
-          className="w-full h-full object-cover"
+          className="work-card-logo"
           src={card.url}
-          alt="Card Image"
+          alt={`${card.name} logo`}
         />
       </div>
 
-      <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 duration-500 bg-white bg-opacity-50 group-hover:backdrop-blur-sm transition hover:delay-[300ms]">
-        <div className="p-5 text-black text-center font-open-sans">
-          <h2 className="font-bold text-4xl underline">{card.title}</h2>
-          <h2 className="font-bold text-2xl italic text-gray-900">{card.name}</h2>
-          <p className="pt-[5%] text-xl font-bold">{card.desc}</p>
+      <div className="work-card-overlay">
+        <div className="work-card-content">
+          <h2 className="work-card-title">{card.title}</h2>
+          <h3 className="work-card-company">{card.name}</h3>
+          <p className="work-card-description">{card.desc}</p>
         </div>
       </div>
     </div>
