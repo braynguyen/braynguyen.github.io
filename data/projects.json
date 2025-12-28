@@ -1,6 +1,16 @@
 {
     "projects": [
         {
+            "Name": "<a href='https://github.com/braynguyen/The-Social-Space'>The Social Space</a>",
+            "Tagline": "Full-Stack Data Visualization",
+            "About": "In this project, we graphically represented TikTok's social media algorithm with an interactive and intuitive Three.js and WebGL 3d graph. To do this, we web scraped 300,000+ TikTok videos for hashtags into a tabular file and built a custom weighted graph data structure to store the data. Then, we used Louvain method with NetworkX to color similar hashtag clusters.",
+            "Tags": [
+                "AWS",
+                "Three.js",
+                "WebGL"
+            ]
+        },
+        {
             "Name": "<a href='https://github.com/braynguyen/MediLingual'>MediLingual</a>",
             "Tagline": "1st  Place Healthcare Hack @YHack 2024",
             "About": "MediLingual is a universal assistant which provides medical domain-specific multilingual translation services in 99 different languages.<br /><br />It uses a Flask REST API that handles any combination of 4581 to ease translation between patient and doctor in real time and Whisper and OpenAI API with few-shot and chain-of-thought prompting to remove any untranslatable medical jargon.",
@@ -11,13 +21,13 @@
             ]
         },
         {
-            "Name": "<a href='https://github.com/braynguyen/The-Social-Space'>The Social Space</a>",
-            "Tagline": "Full-Stack Data Visualization",
-            "About": "The Social Space is currently hosted using AWS and Docker at <a href='https://the-social-space.com/'><u>the-social-space.com.</u></a><br /><br />In this project, we graphically represented TikTok's social media algorithm with an interactive and intuitive Three.js and WebGL 3d graph. To do this, we web scraped 300,000+ TikTok videos for hashtags into a tabular file andbuilt a custom weighted graph data structure to store the data. Then, we used Louvain method with NetworkX to color similar hashtag clusters.",
+            "Name": "<a href='https://github.com/braynguyen/TDMA-Forwarding'>TDMA-Forwarding</a>",
+            "Tagline": "TDMA-based Routing Protocol Implementation",
+            "About": "An implementation of the TDMA-based routing protocol from the paper \"Routing in Mobile Cyber-Physical Systems\" by Luis Oliveira & Luis Almeida. This C implementation using Docker containers demonstrates synchronized multi-hop message routing where nodes can forward messages within the sender's time slot, enabling efficient relay communication across a network topology.",
             "Tags": [
-                "AWS",
-                "Three.js",
-                "WebGL"
+                "C",
+                "Docker",
+                "Routing"
             ]
         },
         {

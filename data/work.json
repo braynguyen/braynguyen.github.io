@@ -1,59 +1,58 @@
 {
-    "work": [{
-        "url": "/logos/PNC.png",
-        "name": "PNC",
-        "title": "Software Engineer Intern",
-        "desc": "Incoming AI Software Engineering Intern",
-        "id": 1
-      },
-      {
-        "url": "/logos/stanford.png",
-        "name": "Stanford Code in Place",
-        "title": "Student Instructor",
-        "desc": "Teaching Stanford's CS106A. Educated students in Python leveraging beginner-friendly libraries such as Stanford's Karel.",
-        "id": 2
-      },
-      {
-        "url": "/logos/surreality_lab.png",
-        "name": "Surreality Lab",
-        "title": "Computer Science Research Lead",
-        "desc": "Developed a WebSocket API for connecting electric scalpels to an AR dashboard, enhancing surgical precision & reducing contamination risk, leading to faster surgeries & improved communication in the operating room. Spearheaded IoT project in OR, leveraging AR dashboards for display & button control, employing computer vision & machine learning for segmentation, optimizing operational efficiency.",
-        "id": 3
-      },
-      {
-        "url": "/logos/IBM.png",
-        "name": "IBM",
-        "title": "IBM Accelerate Fellow",
-        "desc": "Incoming IBM Accelerate Fellow for software engineering",
-        "id": 4
-      },
-      {
-        "url": "/logos/UCSB.png",
-        "name": "UCSB HAL Lab",
-        "title": "LLM Researcher",
-        "desc": "Simulated Hobbesian Social Contract Theory using generative agents created with OpenAI to verify and build open his findings. Architected an algorithm for generative agents to propose and discuss policies, taking the simulation from numbers to full on conversations.",
-        "id": 5
-      },
-      {
-        "url": "/logos/PittCSC.png",
-        "name": "Pitt CSC",
-        "title": "Special Events Coordinator",
-        "desc": "Doubled events from 18 to 40, amassed 320+ unique attendees, over $5000 in sponsorship money, 17 guest speakers, 7 tech talks, and 1,288 slices of pizza. Organized two hackathons, SteelHacks and CSC Hacks, with 152 entrants and 20,000+ lines of code total.",
-        "id": 6
-      },
-      {
-        "url": "/logos/responsive_medicine.png",
-        "name": "Local Company",
-        "title": "SWE Intern",
-        "desc": "Migrated company website from Wix to self-hosted React and Node web-app, projecting $20,000 savings year after year and increasing productivity of front-desk scheduling team by 60%. Added an on-website scheduler for appointments using Google Calendar API to reduce the friction of scheduling for patients and stored the appointments in a MySQL database.",
-        "id": 7
-      },
-      {
-        "url": "/logos/PPG.png",
-        "name": "PPG",
-        "title": "PPG Primer Intern",
-        "desc": "Collaborated with other interns on small projects and tasks designed for team building and creativity. Attended a workshop on Agile methodology and put it to use for mock design at a design thinking workshop. Learned the beginnings of the Lean Six Sigma methodology through an overview session",
-        "id": 8
-      }
-    ]
+  "work": [
+    {
+      "url": "/logos/microsoft.png",
+      "name": "Microsoft",
+      "title": "Software Engineer",
+      "desc": "Built an AI agent in Python that monitors the health of 2M+ Azure tenants and triages issues in real time using log data. Managed 100k+ logs through Azure Data Explorer and Pandas in a multi-threaded environment for fast processing. Developed an algorithm to classify cluster and tenant health to identify issues linked to Windows update rollouts. Automated update management through an AI pipeline to intelligently decide when to pause broken updates."
+    },
+    {
+      "url": "/logos/PNC.png",
+      "name": "PNC",
+      "title": "AI Software Engineer Intern",
+      "desc": "Developed AI-powered solutions for the Lending Services Team, working on machine learning models to enhance lending decision-making and automate financial processes."
+    },
+    {
+      "url": "/logos/stanford.png",
+      "name": "Stanford Code in Place",
+      "title": "Student Instructor",
+      "desc": "Teaching Stanford's CS106A. Educated students in Python leveraging beginner-friendly libraries such as Stanford's Karel."
+    },
+    {
+      "url": "/logos/surreality_lab.png",
+      "name": "Surreality Lab",
+      "title": "Computer Science Research Lead",
+      "desc": "Developed a WebSocket API for connecting electric scalpels to an AR dashboard, enhancing surgical precision & reducing contamination risk, leading to faster surgeries & improved communication in the operating room. Spearheaded IoT project in OR, leveraging AR dashboards for display & button control, employing computer vision & machine learning for segmentation, optimizing operational efficiency."
+    },
+    {
+      "url": "/logos/IBM.png",
+      "name": "IBM",
+      "title": "IBM Accelerate Fellow",
+      "desc": "Completed intensive software engineering fellowship program, working on enterprise-scale projects and gaining hands-on experience with IBM's cloud and AI technologies."
+    },
+    {
+      "url": "/logos/UCSB.png",
+      "name": "UCSB HAL Lab",
+      "title": "LLM Researcher",
+      "desc": "Simulated Hobbesian Social Contract Theory using generative agents created with OpenAI to verify and build open his findings. Architected an algorithm for generative agents to propose and discuss policies, taking the simulation from numbers to full on conversations."
+    },
+    {
+      "url": "/logos/PittCSC.png",
+      "name": "Pitt CSC",
+      "title": "Special Events Coordinator",
+      "desc": "Doubled events from 18 to 40, amassed 320+ unique attendees, over $5000 in sponsorship money, 17 guest speakers, 7 tech talks, and 1,288 slices of pizza. Organized two hackathons, SteelHacks and CSC Hacks, with 152 entrants and 20,000+ lines of code total."
+    },
+    {
+      "url": "/logos/responsive_medicine.png",
+      "name": "Local Company",
+      "title": "SWE Intern",
+      "desc": "Migrated company website from Wix to self-hosted React and Node web-app, projecting $20,000 savings year after year and increasing productivity of front-desk scheduling team by 60%. Added an on-website scheduler for appointments using Google Calendar API to reduce the friction of scheduling for patients and stored the appointments in a MySQL database."
+    },
+    {
+      "url": "/logos/PPG.png",
+      "name": "PPG",
+      "title": "PPG Primer Intern",
+      "desc": "Collaborated with other interns on small projects and tasks designed for team building and creativity. Attended a workshop on Agile methodology and put it to use for mock design at a design thinking workshop. Learned the beginnings of the Lean Six Sigma methodology through an overview session"
+    }
+  ]
 }
